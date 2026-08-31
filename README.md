@@ -68,7 +68,12 @@ Extract the current flash memory content into a file (16384 KB = 16MB):
 python3 programmer.py -p /dev/ttyUSB0 -r original_backup.bin -s 16384
 ```
 *Tip: Run this twice with different filenames and verify using `md5sum original_backup.bin original_backup2.bin` to ensure 100% integrity.*
+```bash
+md5sum original_backup.bin original_backup2.bin
+```
 
+
+-------------------------------------------
 #### Write / Flash BIOS
 Erase and write a new, clean BIOS image file (`new_bios.bin`):
 ```bash
