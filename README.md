@@ -48,6 +48,22 @@ Connect your 1.8V Flash Chip (`MX25U12873F` / SOIC-8) to the ESP32 as follows:
 4. Select your ESP32 board model and port (e.g., `/dev/ttyUSB0`).
 5. Set the Upload Speed to `921600` and hit **Upload**.
 
+### Alternative: Flash using pre-compiled Binary (Without Arduino IDE)
+
+If you don't have the Arduino IDE installed or are flashing from a resource-constrained device, you can write the pre-compiled `.bin` file directly to the ESP32 using `esptool`.
+
+1. Install `esptool` via Python pip:
+   ```bash
+   pip install esptool
+   ```
+
+2. Flash the pre-compiled binary onto your ESP32:
+   ```bash
+   esptool.py --chip esp32 --port /dev/ttyUSB0 --baud 921600 write_flash -z 0x10000 esp32_spi_programmer.bin
+   ```
+   *(Note: Ensure your binary file name matches exactly, and adjust `/dev/ttyUSB0` to your actual device port).*
+
+
 ### 2. Setup the Python Client (Linux)
 Ensure you have Python 3 and `pyserial` installed:
 ```bash
