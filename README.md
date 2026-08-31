@@ -30,12 +30,12 @@ Connect your 1.8V Flash Chip (`MX25U12873F` / SOIC-8) to the ESP32 as follows:
 | :--- | :--- | :--- | :--- |
 | **GND** | **GND** | **Pin 4 (GND)** | Shared common ground between PC, ESP32, and LM317 |
 | **VCC** | *Do NOT connect to ESP32!* | **Pin 8 (VCC)** | **Connect to LM317 output adjusted to ~2.35V** |
-| **CS / CE** | **GPIO 5** | **Pin 1 (CS#)** |  Voltage divider  |
+| **CS / CE** | **GPIO 5** | **Pin 1 (CS#)** |  Voltage divider (1k/1k) |
 | **MISO / DO** | **GPIO 19** | **Pin 2 (DO)** | Direct connection (Input to ESP32) |
 | **WP#** | *Do NOT connect to ESP32!* | **Pin 3 (WP#)** | Connect to LM317 output (~2.35V) |
-| **CLK / SCLK**| **GPIO 18** | **Pin 6 (CLK)** |  Voltage divider  |
+| **CLK / SCLK**| **GPIO 18** | **Pin 6 (CLK)** |  Voltage divider (1k/1k) |
 | **HOLD#** | *Do NOT connect to ESP32!* | **Pin 7 (HOLD#)**| Connect to LM317 output (~2.35V) |
-| **MOSI / DI** | **GPIO 23** | **Pin 5 (DI)** |  Voltage divider  |
+| **MOSI / DI** | **GPIO 23** | **Pin 5 (DI)** |  Voltage divider (1k/1k) |
 
 ---
 
